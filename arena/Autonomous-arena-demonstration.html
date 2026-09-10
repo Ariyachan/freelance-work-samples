@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Autonomous Arena — decision demo</title><style>body{background:#101925;color:#e4edf7;font:16px system-ui;margin:0 auto;max-width:1050px;padding:28px}h1{margin:0 0 8px}p{color:#a9bacb;line-height:1.5}canvas{background:#192738;width:100%;border:1px solid #385069;border-radius:12px}button,input{font:inherit;padding:8px;border-radius:5px;border:1px solid #65829f;margin:0 12px 12px 0}button{background:#294159;color:white;cursor:pointer}#score{font-size:25px;font-weight:700;margin:12px 0}#events{white-space:pre-line;line-height:1.5;font-family:monospace}label{display:inline-block}small{display:block;color:#a9bacb;margin:14px 0}</style><h1>Autonomous Arena</h1><p>A self-initiated 3v3 decision-making demo. Both teams pursue possession, support a carrier, pass under pressure and attempt shots. This is a generic experiment, not an implementation of Tilt or prior client work.</p><label>Seed <input id="seed" type="number" value="7" min="0" max="999999"></label><label>Tackle intensity <input id="aggression" type="range" min="0" max="1" step="0.05" value="0.55"></label><button id="restart">New match</button><button id="pause">Pause</button><div id="score"></div><canvas id="arena" width="1000" height="500"></canvas><p id="stats"></p><div id="events"></div><small>60-second match · fixed simulation timestep · seed controls attributes and stochastic decisions · no server, tracking, assets or paid dependencies. Deliberately basic 2D movement and disc physics; no animation, obstacles, contact physics or production balance.</small><script>
+function createMatch(seed=7, aggression=0.55) {
+  let state=seed>>>0;
+  const random=()=>((state=(Math.imul(state,1664525)+1013904223)>>>0)/4294967296);
+  const distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
+  const game={time:0,score:[0,0],players:[],disc:{x:500,y:250,vx:0,vy:0,owner:-1},events:[],passes:0,turnovers:0,shots:0};
+  for(let team=0;team<2;team++) for(let i=0;i<3;i++) game.players.push({team,x:team?700:300,y:130+i*120,speed:105+random()*25,accuracy:0.7+random()*0.2,cooldown:0,id:team*3+i});
+  function log(message){game.events.unshift({time:game.time,message});game.events=game.events.slice(0,8);}
+  function reset(){game.disc={x:500,y:250,vx:0,vy:0,owner:-1,lock:0};game.players.forEach((p,i)=>{p.x=p.team?700:300;p.y=130+(i%3)*120;p.cooldown=0.8;});}
+  function move(p,target,dt){const d=distance(p,target);if(d>1){const step=Math.min(p.speed*dt,d);p.x+=(target.x-p.x)/d*step;p.y+=(target.y-p.y)/d*step;}p.x=Math.max(20,Math.min(980,p.x));p.y=Math.max(20,Math.min(480,p.y));}
+  function launch(p,target,speed,kind){const disc=game.disc;let dx=target.x-p.x,dy=target.y-p.y;const d=Math.hypot(dx,dy)||1;disc.owner=-1;disc.x=p.x;disc.y=p.y;disc.vx=dx/d*speed;disc.vy=dy/d*speed;disc.lock=0.16;p.cooldown=0.45;if(kind==='pass'){game.passes++;log((p.team?'Coral':'Blue')+' passes');}else{game.shots++;log((p.team?'Coral':'Blue')+' shoots');}}
+  function tick(dt=1/60){
+    if(game.time>=60)return;
+    game.time=Math.min(60,game.time+dt);
+    let disc=game.disc;
+    for(const p of game.players)p.cooldown=Math.max(0,p.cooldown-dt);
+    const carrier=game.players[disc.owner];
+    for(const p of game.players){
+      const direction=p.team?-1:1;
+      if(p===carrier){
+        const goal={x:p.team?0:1000,y:250};
+        const opponents=game.players.filter(q=>q.team!==p.team);
+        const nearest=Math.min(...opponents.map(q=>distance(p,q)));
+        if(Math.abs(goal.x-p.x)<180 && p.cooldown===0){launch(p,{x:goal.x,y:250+(random()-0.5)*(1-p.accuracy)*350},430,'shot');break;}
+        const mates=game.players.filter(q=>q.team===p.team&&q!==p).sort((a,b)=>direction*(b.x-a.x));
+        if(nearest<90 && p.cooldown===0 && mates[0] && distance(p,mates[0])>60){launch(p,mates[0],360,'pass');break;}
+        move(p,{x:goal.x,y:250+Math.sin(game.time*0.7+p.id)*70},dt);
+      }else if(!carrier){
+        const own=game.players.filter(q=>q.team===p.team).sort((a,b)=>distance(a,disc)-distance(b,disc));
+        move(p,own[0]===p?disc:{x:disc.x+direction*(80+(p.id%3)*25),y:110+(p.id%3)*140},dt);
+      }else if(p.team===carrier.team){move(p,{x:carrier.x+direction*130,y:100+(p.id%3)*150},dt);}
+      else{const defenders=game.players.filter(q=>q.team===p.team).sort((a,b)=>distance(a,carrier)-distance(b,carrier));move(p,defenders[0]===p?carrier:{x:carrier.x-direction*70,y:110+(p.id%3)*140},dt);}
+    }
+    disc=game.disc;
+    if(disc.owner>=0){const p=game.players[disc.owner];disc.x=p.x;disc.y=p.y;for(const q of game.players){if(q.team!==p.team&&distance(p,q)<25&&q.cooldown===0&&random()<aggression*dt*2){disc.owner=q.id;q.cooldown=0.7;p.cooldown=0.7;game.turnovers++;log((q.team?'Coral':'Blue')+' wins possession');break;}}}
+    else{
+      disc.lock=Math.max(0,(disc.lock||0)-dt);disc.x+=disc.vx*dt;disc.y+=disc.vy*dt;disc.vx*=Math.exp(-0.1*dt);disc.vy*=Math.exp(-0.1*dt);
+      if((disc.x<8||disc.x>992)&&disc.y>165&&disc.y<335){const team=disc.x>992?0:1;game.score[team]++;log((team?'Coral':'Blue')+' scores');reset();return;}
+      if(disc.x<8||disc.x>992){disc.x=Math.max(8,Math.min(992,disc.x));disc.vx*=-0.75;}
+      if(disc.y<8||disc.y>492){disc.y=Math.max(8,Math.min(492,disc.y));disc.vy*=-0.75;}
+      if(disc.lock===0){const candidates=game.players.filter(p=>p.cooldown===0&&distance(p,disc)<22).sort((a,b)=>distance(a,disc)-distance(b,disc));if(candidates.length){disc.owner=candidates[0].id;candidates[0].cooldown=0.4;disc.vx=disc.vy=0;}}
+    }
+  }
+  reset();return {game,tick};
+}
+
+let match=createMatch(7),paused=false;const canvas=document.getElementById('arena'),ctx=canvas.getContext('2d');
+document.getElementById('restart').onclick=()=>{match=createMatch(Number(document.getElementById('seed').value),Number(document.getElementById('aggression').value));paused=false;document.getElementById('pause').textContent='Pause';};
+document.getElementById('pause').onclick=e=>{paused=!paused;e.target.textContent=paused?'Resume':'Pause';};
+function draw(){const g=match.game;ctx.clearRect(0,0,1000,500);ctx.strokeStyle='#47617a';ctx.lineWidth=2;ctx.strokeRect(15,15,970,470);ctx.beginPath();ctx.moveTo(500,15);ctx.lineTo(500,485);ctx.stroke();ctx.beginPath();ctx.arc(500,250,80,0,Math.PI*2);ctx.stroke();ctx.fillStyle='#54b7ff';ctx.fillRect(0,165,10,170);ctx.fillStyle='#ff987f';ctx.fillRect(990,165,10,170);for(const p of g.players){ctx.fillStyle=p.team?'#ff987f':'#54b7ff';ctx.beginPath();ctx.arc(p.x,p.y,14,0,Math.PI*2);ctx.fill();ctx.fillStyle='#101925';ctx.textAlign='center';ctx.font='bold 13px system-ui';ctx.fillText(String(p.id%3+1),p.x,p.y+4);}ctx.fillStyle='#ffe786';ctx.beginPath();ctx.arc(g.disc.x,g.disc.y,6,0,Math.PI*2);ctx.fill();document.getElementById('score').textContent='BLUE '+g.score[0]+' : '+g.score[1]+' CORAL — '+Math.floor(g.time)+' / 60s'+(g.time>=60?' · Final':'');document.getElementById('stats').textContent=g.passes+' passes · '+g.shots+' shots · '+g.turnovers+' tackles won';document.getElementById('events').textContent=g.events.map(e=>e.time.toFixed(1)+'s  '+e.message).join('\n');}
+let last=performance.now(),accumulator=0;function frame(now){accumulator+=Math.min((now-last)/1000,0.1);last=now;while(accumulator>=1/60){if(!paused)match.tick(1/60);accumulator-=1/60;}draw();requestAnimationFrame(frame);}requestAnimationFrame(frame);
+</script></html>
