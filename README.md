@@ -1,5 +1,14 @@
 # Work demonstrations
 
+[Open the browser demonstrations](https://ariyachan.github.io/freelance-work-samples/)
+
+- [Evening conversation interface](https://ariyachan.github.io/freelance-work-samples/evening/) — responsive layout, theme switching and preset interactions.
+- [Autonomous arena](https://ariyachan.github.io/freelance-work-samples/arena/Autonomous-arena-demonstration.html) — JavaScript simulation with match controls.
+- [Manufacturing workflow](https://gist.github.com/Ariyachan/0fe95a1fd96227874a37398c867531ff) — n8n validation and reporting example using synthetic records.
+- [Four-player paper puzzle](puzzles/four-hands.md) — specification and worked solution; not playtested.
+
+These are independent, AI-assisted project demonstrations, not paid client projects. Kai Zhang / Ariyachan.
+
 ## Vertical type-guessing video
 
 [Download the 12-second MP4](https://raw.githubusercontent.com/Ariyachan/freelance-work-samples/main/Quiz-video-demonstration.mp4)
