@@ -1,4 +1,12 @@
-# Work demonstrations
+# Selected work
+
+## Desktop Reptiles — released game
+
+[View Desktop Reptiles on Steam](https://store.steampowered.com/app/4699700/Desktop_Reptiles/)
+
+I am the solo developer of Desktop Reptiles, a 3D desktop reptile-care game built in Godot. I handled its full-stack development. The game was released on Steam in July 2026 under Lacuna Works.
+
+## Independent work demonstrations
 
 [Open the browser demonstrations](https://ariyachan.github.io/freelance-work-samples/)
 
@@ -7,7 +15,7 @@
 - [Manufacturing workflow](https://gist.github.com/Ariyachan/0fe95a1fd96227874a37398c867531ff) — n8n validation and reporting example using synthetic records.
 - [Four-player paper puzzle](puzzles/four-hands.md) — specification and worked solution; not playtested.
 
-These are independent, AI-assisted project demonstrations, not paid client projects. Kai Zhang / Ariyachan.
+These are independent project demonstrations, not paid client projects. Kai Zhang / Ariyachan.
 
 ## Vertical type-guessing video
 
