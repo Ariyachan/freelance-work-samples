@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Three years, one place — nested vector memory study</title>
+  <desc id="desc">An original, fully vector illustration of a couple holding a phone that contains a scene from the previous year, which in turn contains an older scene.</desc>
+  <defs>
+    <linearGradient id="sky26" x2="0" y2="1"><stop stop-color="#31477a"/><stop offset=".56" stop-color="#e8a97f"/><stop offset="1" stop-color="#f7dcb1"/></linearGradient>
+    <linearGradient id="sky24" x2="0" y2="1"><stop stop-color="#8bc6d4"/><stop offset="1" stop-color="#f3dfad"/></linearGradient>
+    <linearGradient id="screen26" x2="0" y2="1"><stop stop-color="#1b2940"/><stop offset="1" stop-color="#25364d"/></linearGradient>
+    <linearGradient id="shirt26" x2="0" y2="1"><stop stop-color="#dc8566"/><stop offset="1" stop-color="#ad4f59"/></linearGradient>
+    <linearGradient id="shirt25" x2="0" y2="1"><stop stop-color="#d7bb78"/><stop offset="1" stop-color="#8e9b68"/></linearGradient>
+    <pattern id="pavers" width="92" height="44" patternUnits="userSpaceOnUse"><path d="M0 0H92M0 44H92M46 0V44" stroke="#7c716d" stroke-opacity=".21" fill="none" stroke-width="2"/></pattern>
+
+    <symbol id="memory24" viewBox="0 0 1200 800">
+      <rect width="1200" height="800" fill="url(#sky24)"/>
+      <circle cx="970" cy="174" r="73" fill="#fff0bf" opacity=".82"/>
+      <path d="M0 381Q165 315 342 372T730 364T1200 351V800H0Z" fill="#789d7e"/>
+      <path d="M0 459Q260 401 533 454T1200 428V800H0Z" fill="#527c68"/>
+      <path d="M0 800V558Q334 512 581 567T1200 551V800Z" fill="#e4d2a5"/>
+      <path d="M441 800Q490 605 597 525Q712 608 797 800Z" fill="#f3e0b6"/>
+      <path d="M50 486V186M1035 479V140" stroke="#604c40" stroke-width="33" stroke-linecap="round"/>
+      <g fill="#4e7c69"><circle cx="95" cy="197" r="118"/><circle cx="2" cy="260" r="93"/><circle cx="1040" cy="162" r="125"/><circle cx="1162" cy="251" r="105"/></g>
+      <g fill="#68977a"><circle cx="179" cy="219" r="76"/><circle cx="958" cy="180" r="87"/></g>
+      <g stroke="#6a6957" stroke-width="10" stroke-linecap="round"><path d="M312 600l-25 99m95-99 27 99M812 590l-20 96m95-96 25 96"/></g>
+      <g fill="#2c4054"><path d="M300 499q64-28 104 20l25 127H266Z"/><path d="M798 492q75-37 117 23l33 126H757Z"/></g>
+      <g fill="#cf927b"><circle cx="343" cy="477" r="44"/><circle cx="848" cy="470" r="44"/><path d="M400 545q92 78 192 62v22q-109 24-202-48ZM790 538q-81 75-197 69v22q129 17 217-58Z"/></g>
+      <g fill="#303245"><path d="M300 460q0-72 54-72 47 0 48 74-15-30-55-26-22 29-47 24Z"/><path d="M805 465q-15-66 31-83 76-22 74 81-16-47-58-48-30 19-47 50Z"/></g>
+      <rect x="529" y="609" width="127" height="111" rx="9" fill="#f8e8c6" stroke="#fff7e8" stroke-width="7" transform="rotate(-6 593 665)"/>
+      <text x="593" y="684" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#5c6d62" transform="rotate(-6 593 665)">2024</text>
+    </symbol>
+
+    <symbol id="memory25" viewBox="0 0 1200 800">
+      <rect width="1200" height="800" fill="#e7d7c4"/>
+      <rect y="572" width="1200" height="228" fill="#b7aa99"/>
+      <rect y="572" width="1200" height="228" fill="url(#pavers)"/>
+      <rect x="0" y="0" width="378" height="580" fill="#bc745d"/><rect x="818" y="0" width="382" height="580" fill="#977c75"/>
+      <g fill="#eac7a1"><rect x="52" y="111" width="255" height="309" rx="10"/><rect x="892" y="112" width="235" height="310" rx="10"/></g>
+      <g fill="#426777"><rect x="70" y="129" width="219" height="273"/><rect x="910" y="129" width="199" height="273"/></g>
+      <g stroke="#e9c9a2" stroke-width="14"><path d="M180 129v273M70 257h219M1009 129v273M910 265h199"/></g>
+      <path d="M0 35H378v63H0ZM818 35h382v63H818Z" fill="#e6a66f"/>
+      <path d="M0 530Q213 483 378 532v52H0ZM818 532q196-56 382 0v52H818Z" fill="#755d59"/>
+      <path d="M375 0h447v572H375Z" fill="#d9c9b3"/>
+      <path d="M476 101h257v339H476Z" fill="#f3e3c6" stroke="#aa9d88" stroke-width="13"/>
+      <path d="M500 127h210v290H500Z" fill="#77969a"/>
+      <path d="M512 351q98-138 191-127v194H512Z" fill="#8ab49f"/>
+      <path d="M419 540h367" stroke="#a58b78" stroke-width="10"/>
+      <g transform="translate(0 24)">
+        <path d="M332 784l25-234q15-69 109-86l113 58 48 262Z" fill="url(#shirt25)"/>
+        <path d="M770 784l-13-247q-20-81-105-87l-98 76-30 258Z" fill="#637d85"/>
+        <path d="M449 497l-8 62 57 29 42-67-17-48Z" fill="#d69980"/>
+        <path d="M680 482l6 71-63 27-34-55 13-60Z" fill="#bf806b"/>
+        <ellipse cx="491" cy="412" rx="71" ry="83" fill="#e0a68d"/><ellipse cx="641" cy="402" rx="69" ry="84" fill="#cf9277"/>
+        <path d="M419 428q-23-99 53-132 82-29 112 42-64-13-94 16-24 7-37 43l-15 30Z" fill="#3c3941"/>
+        <path d="M572 420q-30-127 65-141 89 2 82 115l-23 29q-1-57-45-78-45 27-79 75Z" fill="#3f3f48"/>
+        <g fill="#5c4a46"><circle cx="471" cy="415" r="5"/><circle cx="523" cy="413" r="5"/><circle cx="620" cy="403" r="5"/><circle cx="665" cy="403" r="5"/></g>
+        <g stroke="#99675d" stroke-width="5" fill="none" stroke-linecap="round"><path d="M478 450q18 13 37 0M626 442q18 13 34-2"/></g>
+        <path d="M453 546q50 31 102 83l-16 34q-64-52-107-76ZM677 539q-55 28-94 91l-29-22q38-75 101-103Z" fill="#d79b83"/>
+      </g>
+      <g transform="rotate(2 565 604)">
+        <rect x="498" y="501" width="139" height="217" rx="21" fill="#242f3c" stroke="#e4d6c6" stroke-width="7"/>
+        <svg x="509" y="522" width="117" height="169" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"><use xlink:href="#memory24" width="1200" height="800"/></svg>
+        <rect x="546" y="704" width="43" height="4" rx="2" fill="#9fa7a9"/>
+      </g>
+      <text x="600" y="772" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="25" fill="#514c49" letter-spacing="3">THE SAME CORNER · 2025</text>
+    </symbol>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#sky26)"/>
+  <circle cx="857" cy="269" r="85" fill="#fff0c4" opacity=".81"/>
+  <path d="M0 396q230-28 420 0t420 0t360-3v178H0Z" fill="#5d8d99"/>
+  <g fill="none" stroke="#f7cead" stroke-width="8" opacity=".66"><path d="M11 450q110 15 220 0t219 0 219 0 219 0 219 0M0 509q160 13 310 0t310 0 310 0 270 0"/></g>
+  <path d="M0 545h1200v255H0Z" fill="#e0cbb7"/><path d="M0 545h1200v255H0Z" fill="url(#pavers)"/>
+  <path d="M0 550h1200" stroke="#9a8b82" stroke-width="14"/>
+  <g stroke="#3f5361" stroke-width="15" fill="none"><path d="M0 460h1200M0 514h1200M74 451v142m195-142v142m195-142v142m195-142v142m195-142v142m195-142v142"/></g>
+  <g transform="translate(0 5)">
+    <path d="M270 800l37-228q17-119 151-133l142 85 47 276Z" fill="url(#shirt26)"/>
+    <path d="M953 800l-28-235q-18-121-154-136l-136 97-47 274Z" fill="#486c75"/>
+    <path d="M436 460l-12 84 96 38 53-95-20-60Z" fill="#c98b70"/>
+    <path d="M784 447l7 98-97 47-46-92 16-77Z" fill="#aa6d5d"/>
+    <ellipse cx="496" cy="345" rx="98" ry="112" fill="#dba083"/>
+    <ellipse cx="717" cy="333" rx="95" ry="111" fill="#c48670"/>
+    <path d="M396 385q-38-151 65-200 121-42 158 95-68-27-106 12-55-8-95 74Z" fill="#343746"/>
+    <path d="M623 379q-31-163 67-197 120-22 132 142l-27 51q-2-94-67-122-38 71-105 126Z" fill="#272e3c"/>
+    <g fill="#493d3f"><ellipse cx="464" cy="357" rx="6" ry="7"/><ellipse cx="528" cy="357" rx="6" ry="7"/><ellipse cx="680" cy="348" rx="6" ry="7"/><ellipse cx="747" cy="346" rx="6" ry="7"/></g>
+    <g stroke="#9e6b61" stroke-width="6" fill="none" stroke-linecap="round"><path d="M471 397q30 18 55-3M686 393q31 16 55-4"/></g>
+    <path d="M329 591q103-16 192 59l-31 48q-104-57-174-39ZM906 593q-88-13-185 70l22 43q109-73 183-47Z" fill="#d69b80"/>
+    <path d="M518 649q37-35 71-39l23 47-65 44ZM721 666q-39-36-78-52l-30 51 76 46Z" fill="#c58a72"/>
+  </g>
+  <g transform="rotate(-3 617 618)">
+    <rect x="520" y="452" width="201" height="303" rx="32" fill="url(#screen26)" stroke="#e7d7c5" stroke-width="11"/>
+    <svg x="536" y="476" width="169" height="245" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"><use xlink:href="#memory25" width="1200" height="800"/></svg>
+    <rect x="580" y="737" width="79" height="5" rx="2.5" fill="#b7b7b3"/>
+    <circle cx="620" cy="465" r="3" fill="#9aa6a8"/>
+  </g>
+  <g fill="#4a635e"><path d="M1060 800q-11-74 37-137 52 75 40 137Z"/><path d="M52 800q-10-77 37-130 49 64 43 130Z"/></g>
+  <g fill="#678b73"><path d="M1104 800q-32-77-6-149 63 36 52 149Z"/><path d="M87 800q-25-76-3-154 60 45 49 154Z"/></g>
+  <text x="90" y="102" font-family="Georgia,serif" font-size="27" letter-spacing="5" fill="#f8e8d5">THREE YEARS · ONE PLACE</text>
+  <text x="93" y="139" font-family="Arial,sans-serif" font-size="17" letter-spacing="2" fill="#f8e8d5" opacity=".86">A VECTOR STUDY IN NESTED MEMORIES</text>
+  <text x="1090" y="748" text-anchor="end" font-family="Georgia,serif" font-size="40" font-style="italic" fill="#4c5360">2026</text>
+</svg>
