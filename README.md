@@ -18,6 +18,16 @@ I am the solo developer of Desktop Reptiles, a 3D desktop reptile-care game buil
 
 These are independent project demonstrations, not paid client projects. Kai Zhang / Ariyachan.
 
+## Blender character rig — technical study
+
+[Watch or download the four-second MP4](samples/blender-rig-study/rig-technical-study.mp4)
+
+![Simple segmented character demonstrating FK and IK arm poses](samples/blender-rig-study/rig-technical-study.gif)
+
+A self-initiated study using original, simple segmented characters. It demonstrates weighted FK/IK movement and bone-property-driven facial texture states. Pose, skin movement and four facial states were checked, including after saving and reopening in Blender 4.5.9.
+
+This is a small technical study, not a commissioned character or a production-ready rig. It does not establish organic deformation quality, seamless IK/FK pose matching, or acceptance against a buyer's models. Model topology, facial requirements, controls and acceptance would be agreed before paid production.
+
 ## Vertical type-guessing video
 
 [Download the 12-second MP4](https://raw.githubusercontent.com/Ariyachan/freelance-work-samples/main/Quiz-video-demonstration.mp4)
