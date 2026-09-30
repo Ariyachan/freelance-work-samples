@@ -19,6 +19,10 @@ I am the solo developer of Desktop Reptiles, a 3D desktop reptile-care game buil
 
 These are independent project demonstrations, not paid client projects. Kai Zhang / Ariyachan.
 
+## Technical writing
+
+- [The Firestore document had an ID. The model still rejected it.](articles/firestore-document-id-model-boundary.md) — an AI-assisted field note grounded in a public code contribution and its recorded tests; it does not claim client publication or upstream acceptance.
+
 ## Blender character rig — technical study
 
 [Watch or download the four-second MP4](samples/blender-rig-study/rig-technical-study.mp4)
