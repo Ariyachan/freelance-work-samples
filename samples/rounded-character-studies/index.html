@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Original rounded character studies — Kai Zhang</title>
+  <meta name="description" content="Two original Blender character form studies, with interactive 3D models and rendered views.">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+  <style>
+    :root {color-scheme:light; font-family:system-ui,sans-serif; background:#faf8f3;color:#28332e}
+    * {box-sizing:border-box} body {margin:0} main {max-width:1100px;margin:auto;padding:32px 24px 56px}
+    a {color:#23644d;text-underline-offset:3px} header {max-width:790px;margin:20px 0 28px}
+    h1 {font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:12px 0 20px;letter-spacing:-.04em}
+    p {line-height:1.65} .eyebrow {font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#66766c}
+    .hero {width:100%;height:auto;border-radius:18px;display:block} .cards {display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+    article {background:#fff;border:1px solid #e2e4da;border-radius:18px;overflow:hidden} .copy {padding:20px 22px}
+    h2 {margin:0 0 8px;font-size:1.4rem} model-viewer {width:100%;height:380px;background:#efeee6}
+    .views {display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 18px 18px}
+    .views img {width:100%;height:auto;border-radius:8px;display:block} figure {margin:0} figcaption {font-size:.78rem;text-align:center;margin-top:5px;color:#67766c}
+    .note {padding-top:18px;font-size:.93rem;color:#5a685f} footer {margin-top:36px;border-top:1px solid #dedfd4;padding-top:20px}
+    @media(max-width:700px) {.cards {grid-template-columns:1fr} main {padding:22px 16px 40px} model-viewer {height:340px}}
+  </style>
+</head>
+<body><main>
+  <a href="../../">Kai Zhang · Selected work</a>
+  <header><div class="eyebrow">Original modeling samples · 9 October 2026</div>
+    <h1>Two rounded characters,<br>shown as actual 3D models.</h1>
+    <p>Pebble Frog and Coral Bear are new, self-initiated Blender studies of soft silhouettes, domed features and simple facial expressions. The views below are renders of the same geometry available in each interactive viewer.</p>
+    <p class="note">These are digital form studies. They have not been physically printed or delivered as commissioned work.</p>
+  </header>
+  <img class="hero" src="two-original-studies.png" width="1400" height="900" alt="A mint-green rounded frog and coral-colored rounded bear, rendered together in a studio scene">
+  <div class="cards">
+    <article><model-viewer src="pebble-frog.glb" alt="Interactive 3D model of Pebble Frog" camera-controls touch-action="pan-y" shadow-intensity="1" loading="eager" camera-orbit="25deg 75deg auto"></model-viewer>
+      <div class="copy"><h2>Pebble Frog</h2><p>A wide rounded head, domed eye mounds, plump haunches and separate soft facial features.</p><p>Drag to rotate · scroll or pinch to zoom.<br><a href="pebble-frog.glb" download>Download the actual GLB model</a></p></div>
+      <div class="views"><figure><a href="pebble-frog-front.png"><img src="pebble-frog-front.png" alt="Pebble Frog front view"></a><figcaption>Front</figcaption></figure><figure><a href="pebble-frog-three-quarter.png"><img src="pebble-frog-three-quarter.png" alt="Pebble Frog three-quarter view"></a><figcaption>Three-quarter</figcaption></figure><figure><a href="pebble-frog-back.png"><img src="pebble-frog-back.png" alt="Pebble Frog back view"></a><figcaption>Back</figcaption></figure></div>
+    </article>
+    <article><model-viewer src="coral-bear.glb" alt="Interactive 3D model of Coral Bear" camera-controls touch-action="pan-y" shadow-intensity="1" loading="eager" camera-orbit="25deg 75deg auto"></model-viewer>
+      <div class="copy"><h2>Coral Bear</h2><p>A large soft head, rounded ear rims, a raised muzzle and simple pill-shaped limbs.</p><p>Drag to rotate · scroll or pinch to zoom.<br><a href="coral-bear.glb" download>Download the actual GLB model</a></p></div>
+      <div class="views"><figure><a href="coral-bear-front.png"><img src="coral-bear-front.png" alt="Coral Bear front view"></a><figcaption>Front</figcaption></figure><figure><a href="coral-bear-three-quarter.png"><img src="coral-bear-three-quarter.png" alt="Coral Bear three-quarter view"></a><figcaption>Three-quarter</figcaption></figure><figure><a href="coral-bear-back.png"><img src="coral-bear-back.png" alt="Coral Bear back view"></a><figcaption>Back</figcaption></figure></div>
+    </article>
+  </div>
+  <footer><p>Modeled in Blender. GLB files were exported and re-imported to check that the actual geometry and materials opened successfully. Printing scale, part connections and physical fit would be designed and tested for a specific commissioned object.</p></footer>
+</main></body></html>
