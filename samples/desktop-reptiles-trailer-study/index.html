@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Desktop Reptiles — independent trailer edit</title>
+<style>
+body{margin:0;background:#0c1816;color:#f4eddc;font:18px/1.6 system-ui,sans-serif}main{max-width:1000px;margin:auto;padding:32px 24px}p{max-width:800px;color:#bfd0c6}h1{line-height:1.15;margin:10px 0 18px;font-size:38px}.eyebrow{color:#98b4a5;font-size:16px;margin:0}video{width:100%;height:auto;background:#000;border-radius:10px;margin-top:10px}button{padding:10px 20px;border:0;border-radius:6px;background:#e3ebbb;color:#17201d;font:600 16px system-ui;cursor:pointer}a{color:#e3ebbb}.actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:16px}@media(max-width:600px){main{padding:20px 16px}h1{font-size:30px}}
+</style>
+<main>
+<p class="eyebrow">Independent trailer edit</p>
+<h1>Desktop Reptiles</h1>
+<p>A new 21-second, self-initiated edit using gameplay footage from my own released game. The piece shows shot selection, feature captions, an original music bed and a closing game title.</p>
+<video id="trailer" controls preload="metadata" playsinline src="desktop-reptiles-trailer-study.mp4" aria-label="Desktop Reptiles independent trailer study"></video>
+<div class="actions"><button id="play" type="button">Play trailer</button><a href="https://store.steampowered.com/app/4699700/Desktop_Reptiles/">View the game on Steam</a><a href="../../">More selected work</a></div>
+</main>
+<script>
+const player=document.getElementById('trailer'),button=document.getElementById('play');
+button.addEventListener('click',()=>{if(player.paused){player.play()}else{player.pause()}});
+player.addEventListener('play',()=>{button.textContent='Pause trailer'});
+player.addEventListener('pause',()=>{button.textContent='Play trailer'});
+player.addEventListener('ended',()=>{button.textContent='Play trailer'});
+</script>
+</html>
