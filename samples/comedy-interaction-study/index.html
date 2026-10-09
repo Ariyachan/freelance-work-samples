@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Approval Required — an original interaction study</title>
+  <style>
+    :root{--paper:#f4eddc;--ink:#25261f;--red:#b93220;--yellow:#ffd360;--green:#346c48;--muted:#65685c}
+    *{box-sizing:border-box}body{margin:0;background:#e6dbc1;color:var(--ink);font-family:Georgia,serif;min-height:100vh}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.23;background:repeating-linear-gradient(0deg,transparent 0 3px,#86754d15 3px 4px)}
+    button{font:inherit;color:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--green);outline-offset:5px}button:disabled{cursor:default}
+    .desk{max-width:940px;margin:auto;padding:26px 24px 18px}.masthead{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--ink);gap:12px;padding-bottom:13px}
+    .label,.round,.instructions,.score,.clerk-title,.caption,.footnote,.sound{font-family:Consolas,"Courier New",monospace;letter-spacing:.05em}.label{font-size:11px;text-transform:uppercase}
+    .sound{background:transparent;border:1px solid var(--ink);padding:8px 11px;font-size:12px;white-space:nowrap}
+    h1{font-size:clamp(32px,6.4vw,61px);letter-spacing:-.04em;line-height:.95;max-width:650px;margin:22px 0 12px;font-weight:normal}h1 i{color:var(--red)}
+    .instructions{font-size:12px;line-height:1.65;max-width:650px;margin:0 0 18px}kbd{display:inline-block;background:var(--ink);color:var(--paper);font:inherit;font-weight:bold;padding:1px 7px;border-radius:2px}
+    .paper{background:var(--paper);border:1px solid var(--ink);padding:20px 30px;min-height:235px;position:relative;box-shadow:6px 7px 0 #b9ae90;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+    .paper::before{content:"";position:absolute;left:13px;top:0;bottom:0;border-left:1px solid #b9322035}.paper-header{display:flex;justify-content:space-between;gap:8px;font:11px Consolas,"Courier New",monospace;border-bottom:1px solid #25261f40;padding-bottom:9px;margin-bottom:12px}
+    #cue{font-size:clamp(27px,6vw,50px);line-height:1.1;letter-spacing:-.025em;margin:9px 0;min-height:55px}.caption{font-size:12px;min-height:34px;line-height:1.5;max-width:670px;margin:0}
+    .paper[data-phase="stamp"] #cue{color:var(--green)}.paper[data-phase="hold"] #cue{color:var(--red)}
+    .seal{position:absolute;right:20px;bottom:20px;transform:rotate(-12deg);border:4px double var(--red);color:var(--red);padding:3px 12px;font:900 21px Consolas,"Courier New",monospace;pointer-events:none;display:none;max-width:85%;background:#f4eddcd9}
+    .seal.show{display:block;animation:stamp .18s ease-out}.players{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:20px}
+    .clerk{border:1px solid var(--ink);background:#eee4ce;padding:13px 16px;position:relative}.clerk-title{font-size:11px;display:flex;justify-content:space-between;gap:6px}.score{font-size:12px}
+    .portrait{display:flex;justify-content:center;align-items:center;height:83px;position:relative}.portrait svg{width:96px;height:83px}.clerk[data-reaction="wrong"] svg{animation:jolt .25s ease-out}
+    .face-stamp{position:absolute;top:31px;left:50%;transform:translateX(-50%) rotate(-10deg);color:var(--red);font:900 15px Consolas,"Courier New",monospace;border:2px solid currentColor;background:#f4eddcdd;display:none;padding:1px 5px}
+    .clerk[data-reaction="wrong"] .face-stamp{display:block}.reaction{font:12px Consolas,"Courier New",monospace;min-height:32px;line-height:1.4;text-align:center;margin:1px 0 8px}
+    .stamp-button{width:100%;border:2px solid var(--ink);background:var(--yellow);padding:10px;box-shadow:0 3px 0 var(--ink);font:bold 15px Consolas,"Courier New",monospace}.stamp-button:active:not(:disabled){transform:translateY(3px);box-shadow:none}.stamp-button:disabled{opacity:.45}
+    .controls{display:flex;align-items:center;gap:20px;margin:18px 0 13px}.start{background:var(--ink);color:var(--paper);border:0;padding:13px 23px;font:bold 14px Consolas,"Courier New",monospace}.round{font-size:12px}.footnote{font-size:10px;line-height:1.5;border-top:1px solid #25261f60;padding-top:12px;margin:0;color:var(--muted)}
+    @keyframes stamp{from{transform:scale(1.5) rotate(-12deg);opacity:.1}to{transform:scale(1) rotate(-12deg);opacity:1}}@keyframes jolt{0%,100%{transform:translateX(0)}40%{transform:translateX(-7px)}70%{transform:translateX(5px)}}
+    @media(max-width:560px){.desk{padding:18px 15px}.label{font-size:9px}.paper{padding:17px 23px;min-height:245px}.paper-header{font-size:10px}.players{gap:10px}.clerk{padding:11px 9px}.clerk-title{font-size:10px}.score{font-size:10px}.stamp-button{font-size:12px}.seal{right:15px;bottom:15px;font-size:17px}.controls{gap:14px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="desk">
+    <header class="masthead"><span class="label">Department of unnecessary urgency / form 05-B</span><button class="sound" id="sound" type="button" aria-pressed="false">Sound off</button></header>
+    <h1>Approval <i>required.</i></h1>
+    <p class="instructions">Two players. One desk. Five forms.<br>Stamp only when the paper says <b>STAMP</b>. Player one uses <kbd>F</kbd>, player two uses <kbd>J</kbd>. You can also tap the buttons.</p>
+    <section class="paper" id="paper" data-phase="ready" aria-label="Current form">
+      <div class="paper-header"><span id="form">FORM 00 / PLEASE READ BEFORE NOT READING</span><span>IN TRIPLICATE*</span></div>
+      <h2 id="cue" role="status" aria-live="polite">Your promotion is pending.</h2>
+      <p class="caption" id="caption">It is a very important stamp. Management would like it used correctly at least once.</p>
+      <div class="seal" id="seal" aria-hidden="true"></div>
+    </section>
+    <div class="players">
+      <section class="clerk" id="clerk-f" aria-label="Player F" data-reaction="neutral">
+        <div class="clerk-title"><span>CLERK / F</span><span class="score" id="score-f">0 points</span></div>
+        <div class="portrait"><svg viewBox="0 0 96 83" aria-hidden="true"><path d="M15 80q1-29 33-29t33 29" fill="#898d75" stroke="#25261f" stroke-width="2"/><path d="M41 54l7 9 7-9" fill="#f4eddc" stroke="#25261f" stroke-width="2"/><path d="M48 63l-4 17h8z" fill="#b93220"/><rect x="25" y="10" width="46" height="47" rx="18" fill="#f4eddc" stroke="#25261f" stroke-width="2"/><path d="M26 22q-2-21 22-20 24-1 23 21l-13-8-10 6-11-5z" fill="#25261f"/><circle cx="38" cy="33" r="2.5"/><circle cx="58" cy="33" r="2.5"/><path d="M39 45h18M33 27l11-2m9 0l11 2" stroke="#25261f" stroke-width="2" fill="none"/></svg><span class="face-stamp">APPROVED</span></div>
+        <p class="reaction" id="reaction-f">Read the form.<br>You are doing great.</p><button class="stamp-button" id="stamp-f" type="button" disabled>Stamp with F</button>
+      </section>
+      <section class="clerk" id="clerk-j" aria-label="Player J" data-reaction="neutral">
+        <div class="clerk-title"><span>CLERK / J</span><span class="score" id="score-j">0 points</span></div>
+        <div class="portrait"><svg viewBox="0 0 96 83" aria-hidden="true"><path d="M15 80q1-29 33-29t33 29" fill="#b8946b" stroke="#25261f" stroke-width="2"/><path d="M41 54l7 9 7-9" fill="#f4eddc" stroke="#25261f" stroke-width="2"/><path d="M48 63l-4 17h8z" fill="#346c48"/><rect x="25" y="10" width="46" height="47" rx="18" fill="#f4eddc" stroke="#25261f" stroke-width="2"/><path d="M26 22q-3-21 22-21t23 21l-18-7-13 4z" fill="#25261f"/><circle cx="38" cy="33" r="2.5"/><circle cx="58" cy="33" r="2.5"/><path d="M39 45h18M31 31h14v9H31zm20 0h14v9H51zm-6 4h6" stroke="#25261f" stroke-width="2" fill="none"/></svg><span class="face-stamp">APPROVED</span></div>
+        <p class="reaction" id="reaction-j">Also read the form.<br>It is the same form.</p><button class="stamp-button" id="stamp-j" type="button" disabled>Stamp with J</button>
+      </section>
+    </div>
+    <div class="controls"><button class="start" id="start" type="button">Begin shift</button><span class="round" id="round">About 25 seconds / sound optional</span></div>
+    <p class="footnote">Original, self-initiated interaction study by Kai Zhang. Local two-player prototype. *There is only one copy.</p>
+  </main>
+  <script>
+    const $ = id => document.getElementById(id);
+    const forms = [
+      {wait:1800,kind:'stamp',window:2000,name:'REQUEST TO BEGIN REQUESTING'},
+      {wait:1000,kind:'stamp',window:1800,name:'URGENTLY NON-URGENT'},
+      {wait:1300,kind:'hold',window:1800,name:'DO NOT APPROVE THIS FORM'},
+      {wait:1600,kind:'stamp',window:1700,name:'NOT A TRICK THIS TIME'},
+      {wait:1000,kind:'stamp',window:1700,name:'REQUEST TO END REQUESTING'}
+    ];
+    let phase='ready',current=-1,timers=[],scores={f:0,j:0},acted={},stampedAt={},audio=null,sound=false;
+    function later(fn,ms){timers.push(setTimeout(fn,ms));}
+    function cue(text,caption){$('cue').textContent=text;$('caption').textContent=caption;$('paper').dataset.phase=phase;}
+    function react(player,text,kind){$('reaction-'+player).textContent=text;$('clerk-'+player).dataset.reaction=kind;$('score-'+player).textContent=scores[player]+' points';}
+    function tone(frequency,duration,offset=0){
+      if(!sound||!audio||audio.state!=='running')return;
+      const oscillator=audio.createOscillator(),gain=audio.createGain(),at=audio.currentTime+offset;
+      oscillator.type='triangle';oscillator.frequency.setValueAtTime(frequency,at);gain.gain.setValueAtTime(0,at);gain.gain.linearRampToValueAtTime(.09,at+.005);gain.gain.exponentialRampToValueAtTime(.0001,at+duration);oscillator.connect(gain);gain.connect(audio.destination);oscillator.start(at);oscillator.stop(at+duration);
+    }
+    function stampSeal(text){$('seal').textContent=text;$('seal').classList.remove('show');void $('seal').offsetWidth;$('seal').classList.add('show');}
+    function action(player){
+      if(!['waiting','stamp','hold'].includes(phase)||acted[player])return;
+      acted[player]=true;
+      if(phase==='waiting'){
+        scores[player]--;react(player,'You approved your own forehead.','wrong');stampSeal('TOO ENTHUSIASTIC');tone(115,.12);return;
+      }
+      if(phase==='hold'){
+        scores[player]--;react(player,'You approved “DO NOT APPROVE”.','wrong');stampSeal('IMPRESSIVE NONCOMPLIANCE');tone(110,.13);tone(85,.12,.12);return;
+      }
+      scores[player]++;stampedAt[player]=performance.now();react(player,'Important-looking work completed.','right');stampSeal('APPROVED');tone(190,.08);
+      const other=player==='f'?'j':'f';
+      if(stampedAt[other]!==undefined&&Math.abs(stampedAt[player]-stampedAt[other])<=220){
+        scores.f++;scores.j++;react('f','Synchronized nonsense. +1 each.','right');react('j','Synchronized nonsense. +1 each.','right');stampSeal('TEAMWORK, APPARENTLY');tone(520,.1,.1);tone(690,.14,.22);
+      }
+    }
+    function finishForm(){
+      const form=forms[current];
+      for(const player of ['f','j']){
+        if(!acted[player]&&form.kind==='hold'){scores[player]++;react(player,'You did nothing. Management is delighted.','right');}
+        else if(!acted[player])react(player,'Your restraint was not requested.','neutral');
+      }
+      phase='result';
+      const bothCorrect=form.kind==='hold'?(!acted.f&&!acted.j):(stampedAt.f!==undefined&&stampedAt.j!==undefined);
+      cue(bothCorrect?'A model of efficiency.':'Please file the incident.',form.kind==='hold'?'Sometimes the best teamwork is absolutely no teamwork.':'Please retain this form until nobody remembers why.');
+      later(nextForm,1250);
+    }
+    function nextForm(){
+      current++;
+      if(current===forms.length){
+        phase='done';for(const p of ['f','j'])$('stamp-'+p).disabled=true;
+        const winner=scores.f===scores.j?'Joint employee of the minute.':(scores.f>scores.j?'Clerk F is employee of the minute.':'Clerk J is employee of the minute.');
+        cue(winner,'Your reward: another shift. The stamp has been promoted.');$('form').textContent='SHIFT COMPLETE / KEEP THE STAMP';$('round').textContent='F: '+scores.f+' · J: '+scores.j;$('start').textContent='Another shift';stampSeal('STAMP PROMOTED');tone(440,.15);tone(660,.18,.19);tone(110,.16,.4);return;
+      }
+      const form=forms[current];acted={};stampedAt={};$('seal').classList.remove('show');
+      for(const p of ['f','j'])react(p,'Waiting for the paper.','neutral');
+      $('round').textContent='Round '+(current+1)+' / '+forms.length;$('form').textContent='FORM 0'+(current+1)+' / '+form.name;
+      phase='waiting';cue('WAIT.','The form is gathering confidence. Do not stamp yet.');
+      later(()=>{phase=form.kind;cue(form.kind==='hold'?'DO NOT STAMP.':'STAMP.','Instructions are legally very large.');tone(form.kind==='hold'?230:420,.08);later(finishForm,form.window);},form.wait);
+    }
+    function begin(){
+      timers.forEach(clearTimeout);timers=[];scores={f:0,j:0};current=-1;
+      for(const p of ['f','j'])$('stamp-'+p).disabled=false;
+      $('start').textContent='Restart shift';nextForm();
+    }
+    $('start').addEventListener('click',begin);
+    for(const p of ['f','j'])$('stamp-'+p).addEventListener('click',()=>action(p));
+    document.addEventListener('keydown',event=>{const p=event.key.toLowerCase();if((p==='f'||p==='j')&&!event.repeat){event.preventDefault();action(p);}});
+    $('sound').addEventListener('click',async()=>{
+      if(sound){sound=false;$('sound').textContent='Sound off';$('sound').setAttribute('aria-pressed','false');return;}
+      try{audio=audio||new AudioContext();await audio.resume();sound=audio.state==='running';$('sound').textContent=sound?'Sound on':'Sound unavailable';$('sound').setAttribute('aria-pressed',String(sound));if(sound)tone(440,.08);}
+      catch{sound=false;$('sound').textContent='Sound unavailable';$('sound').setAttribute('aria-pressed','false');}
+    });
+  </script>
+</body>
+</html>
