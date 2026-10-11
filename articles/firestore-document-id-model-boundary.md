@@ -1,6 +1,6 @@
 # The Firestore document had an ID. The model still rejected it.
 
-*An independent, AI-assisted field note based on [a public Omi contribution](https://github.com/BasedHardware/omi/pull/19046). The tests cited below were run for that contribution in September 2026; this article does not claim a new run or an upstream merge.*
+*An independent field note based on [a public Omi contribution](https://github.com/BasedHardware/omi/pull/19046). The tests cited below were run for that contribution in September 2026; this article does not claim a new run or an upstream merge.*
 
 The failure looked contradictory. A Firestore query found the task document, and the snapshot had an ID. Yet the next line, `Task(**task_data)`, raised `ValidationError: Task.id Field required`.
 

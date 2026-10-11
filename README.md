@@ -21,7 +21,7 @@ These are independent project demonstrations, not paid client projects. Kai Zhan
 
 ## Technical writing
 
-- [The Firestore document had an ID. The model still rejected it.](articles/firestore-document-id-model-boundary.md) — an AI-assisted field note grounded in a public code contribution and its recorded tests; it does not claim client publication or upstream acceptance.
+- [The Firestore document had an ID. The model still rejected it.](articles/firestore-document-id-model-boundary.md) — a field note grounded in a public code contribution and its recorded tests; it does not claim client publication or upstream acceptance.
 
 ## Blender character rig — technical study
 
