@@ -10,7 +10,7 @@ A connected desktop and mobile workspace for independent design studios: project
 
 **[Open the application](https://ariyachan.github.io/fieldwork/)** · **[Read the design case study](https://ariyachan.github.io/fieldwork/case-study.html)** · **[Browse the source](https://github.com/Ariyachan/fieldwork)**
 
-![FIELDWORK workspace](https://raw.githubusercontent.com/Ariyachan/fieldwork/main/public/screenshots/overview.jpg)
+![FIELDWORK workspace](https://raw.githubusercontent.com/Ariyachan/fieldwork/main/public/screenshots/overview.jpg?v=2)
 
 ### Desktop Reptiles
 
