@@ -1,32 +1,783 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kai Zhang — Selected work</title>
-<style>
-body{font:18px/1.65 system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20302f}main{max-width:760px;margin:auto;padding:56px 24px}h1{font-size:clamp(32px,6vw,48px);line-height:1.15}h2{font-size:23px;margin:0}section{padding:24px 0;border-top:1px solid #ccd3ce}a{color:#14594d;text-underline-offset:4px}a:focus-visible{outline:3px solid #a76012;outline-offset:5px}p{margin:12px 0}small{font-size:15px}
-.ux-case{margin-top:24px;padding:16px 18px;border:1px solid #ccd3ce;border-left:3px solid #14594d;background:#eeefe8}.ux-case summary{cursor:pointer;font-weight:650;line-height:1.4}.ux-case summary:focus-visible{outline:3px solid #a76012;outline-offset:5px}.ux-case[open] summary{margin-bottom:14px}.ux-case ul{padding-left:23px;margin:12px 0}.ux-case li+li{margin-top:14px}@media(max-width:480px){.ux-case{padding:14px 12px}}
-</style>
-</head>
-<body><main>
-<p>Kai Zhang / Ariyachan</p>
-<h1>Selected work</h1>
-<p>Game development and independent project demonstrations by Kai Zhang.</p>
-<section><h2><a href="https://store.steampowered.com/app/4699700/Desktop_Reptiles/">Desktop Reptiles — released game</a></h2><p>I am the solo developer of this 3D desktop reptile-care game, built in Godot. I handled its full-stack development. Released on Steam in July 2026 under Lacuna Works.</p><p><a href="https://store.steampowered.com/app/4699700/Desktop_Reptiles/">View the game on Steam</a></p></section>
-<section id="website-ux-review"><h2>Website usability review — US$20</h2><p>For US$20, I review one visitor flow across up to three public website pages and deliver screenshots, prioritized usability findings and specific recommendations.</p><p><a href="https://www.reddit.com/user/NaturalMinute4552/">Contact me on Reddit</a> with your site URL and the action you want visitors to take. I confirm the scope and delivery date before starting. Payment is via PayPal after delivery; one follow-up clarification on the report is included.</p><details class="ux-case" id="recent-paid-ux-review"><summary>Recent paid work: game-discovery UX review</summary><p>I reviewed five signed-out public discovery flows on desktop, following one example path through each. I delivered a written review with six prioritized findings, supporting screenshots, five illustrated report pages and a brief public-store search comparison.</p><ul><li><strong>Platform consistency.</strong> A result for the selected device showed only a different platform’s store link. I recommended a compatible store option or a clearly labelled fallback.</li><li><strong>Continuity between results and browsing.</strong> Selected platform and multiplayer preferences were not visibly carried into refinement filters. I recommended preserving those selections and showing removable filter chips.</li><li><strong>Recommendation explanations.</strong> Results omitted the selected reference games or quiz context and did not explain individual matches. I recommended a short context summary and a specific reason on each result card.</li></ul><p><small>This first-pass review documents observed public interactions and usability recommendations.</small></p></details></section>
-<h2>Independent demonstrations</h2>
-<p>The following are self-initiated work samples. Open a demo in your browser or inspect its source.</p>
-<section><h2><a href="treasury/">Northline treasury interface</a></h2><p>A responsive fintech dashboard concept with sample chart periods, searchable transaction rows and CSV export. The company and all financial figures are fictional; there is no live account connection.</p></section>
-<section><h2><a href="evening/">Evening conversation interface</a></h2><p>A responsive interface with theme switching and preset conversation interactions. Responses are preset for this frontend demonstration.</p><p><a href="evening/desktop.png">Desktop screenshot</a> · <a href="evening/mobile.png">Mobile screenshot</a></p></section>
-<section><h2><a href="arena/Autonomous-arena-demonstration.html">Autonomous arena</a></h2><p>A browser-based JavaScript simulation with match controls. Open the demo to inspect its behavior.</p></section>
-<section><h2><a href="https://gist.github.com/Ariyachan/0fe95a1fd96227874a37398c867531ff">Manufacturing report workflow</a></h2><p>An n8n and JavaScript example that validates synthetic records and calculates production summaries, with reproduction instructions and verification notes.</p></section>
-<section id="brazilian-portuguese-fiction"><h2><a href="https://github.com/Ariyachan/freelance-work-samples/blob/main/writing/brazilian-portuguese-interactive-story-sample.md">Interactive fiction — Brazilian Portuguese</a></h2><p>A self-initiated writing sample with two adult character profiles, a dialogue scene and two choices that lead to different continuations. Includes notes on character voice and branching structure.</p><p><small>An independent fictional sample; not a previous client commission.</small></p></section>
-<section><h2><a href="https://github.com/Ariyachan/freelance-work-samples/blob/main/puzzles/four-hands.md">Four-player paper puzzle</a></h2><p>A room specification, role-specific information, worked solution, and failure/recovery notes. The design has not been playtested.</p></section>
-<section><h2>Blender character rig — technical study</h2><p>An original, simple segmented character study showing weighted FK/IK movement and property-driven facial texture states. Checked after saving and reopening in Blender 4.5.9.</p><video controls preload="metadata" width="600" style="max-width:100%;height:auto;" aria-label="Four-second Blender FK and IK technical study"><source src="samples/blender-rig-study/rig-technical-study.mp4" type="video/mp4"><a href="samples/blender-rig-study/rig-technical-study.mp4">Download the four-second video</a></video><p><a href="samples/blender-rig-study/rig-technical-study.mp4">Watch or download the MP4</a></p><p><small>A self-initiated technical exercise. Organic deformation, seamless IK/FK pose matching and buyer-specific production acceptance have not been validated.</small></p></section>
-<section><h2><a href="Quiz-video-demonstration.mp4">Vertical quiz video</a></h2><p>A 12-second silent typography and countdown demonstration. The fan-trivia names are third-party references.</p></section>
-<section id="educational-short"><h2>Educational short — duplicate order rows</h2><p>A 24-second vertical personal demonstration showing how duplicate rows can inflate an order total, with captions and simple motion graphics. The data and narration are synthetic.</p><video controls playsinline preload="metadata" style="display:block;width:100%;max-width:360px;border-radius:12px"><source src="orders-duplicates-educational-demo.mp4" type="video/mp4"><a href="orders-duplicates-educational-demo.mp4">Watch the educational short</a></video><p><a href="orders-duplicates-educational-demo.mp4">Watch or download the MP4</a></p></section>
-<p><a href="https://github.com/Ariyachan/freelance-work-samples">Source code and project files</a></p>
-<small>Scope, acceptance criteria, delivery dates and payment are agreed for each project before work begins.</small>
-</main></body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Selected interface, frontend and interactive product work by Kai Zhang."
+    />
+    <title>Kai Zhang — Interface design & development</title>
+    <style>
+      @font-face {
+        font-family: Instrument;
+        src: url("assets/portfolio/instrument-sans.woff2") format("woff2");
+        font-display: swap;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f7f6f2;
+        color: #2b2e2b;
+        font:
+          16px/1.7 Instrument,
+          sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:focus-visible,
+      summary:focus-visible {
+        outline: 2px solid #ad5539;
+        outline-offset: 5px;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      nav,
+      main,
+      footer {
+        max-width: 1220px;
+        margin: auto;
+        padding-left: 45px;
+        padding-right: 45px;
+      }
+      nav {
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #dfdfd6;
+        font-size: 13px;
+      }
+      nav > a {
+        font-weight: 500;
+      }
+      nav div {
+        display: flex;
+        gap: 30px;
+        color: #6e716e;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      .label {
+        font-size: 10px;
+        letter-spacing: 1.8px;
+        color: #6e716e;
+        text-transform: uppercase;
+      }
+      .intro {
+        display: grid;
+        grid-template-columns: 1.65fr 1fr;
+        gap: 70px;
+        padding: 68px 0 58px;
+        align-items: end;
+      }
+      h1 {
+        font-weight: 400;
+        font-size: clamp(43px, 5.8vw, 70px);
+        letter-spacing: -3px;
+        line-height: 1.1;
+        margin-top: 23px;
+      }
+      h1 span {
+        color: #ad5539;
+      }
+      .intro p {
+        font-size: 15px;
+        line-height: 1.9;
+        color: #6e716e;
+        margin-bottom: 4px;
+      }
+      .featured {
+        border: 1px solid #d9dfce;
+        border-radius: 6px;
+        background: #efeee7;
+        overflow: hidden;
+      }
+      .featured-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 31px 34px;
+        gap: 50px;
+      }
+      .featured-top h2 {
+        font-size: 31px;
+        font-weight: 400;
+        letter-spacing: -1.2px;
+        margin: 9px 0;
+      }
+      .featured-top p {
+        font-size: 13px;
+        color: #6e716e;
+        max-width: 510px;
+        line-height: 1.8;
+      }
+      .featured-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        flex-shrink: 0;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+        padding: 12px 17px;
+        background: #2e3329;
+        color: #fff;
+        border: 1px solid #2e3329;
+        border-radius: 3px;
+        font-size: 11px;
+        white-space: nowrap;
+      }
+      .button.secondary {
+        background: none;
+        border-color: #cfd8c1;
+        color: #6e716e;
+      }
+      .button:hover {
+        background: #4d5f3e;
+        color: #fff;
+      }
+      .featured-image {
+        display: block;
+        padding: 0 34px 31px;
+        position: relative;
+      }
+      .featured-image img {
+        border: 1px solid #d2dac4;
+        border-radius: 4px;
+        box-shadow: 0 8px 25px #3c4e2b12;
+      }
+      .featured-caption {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 0 34px 24px;
+        font-size: 10px;
+        color: #6e716e;
+      }
+      .selected-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 55px 0 23px;
+      }
+      .selected-heading h2 {
+        font-size: 22px;
+        letter-spacing: -0.8px;
+        font-weight: 400;
+      }
+      .selected-heading span {
+        font-size: 10px;
+        color: #6e716e;
+      }
+      .selected-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 23px;
+      }
+      .work-card {
+        padding: 31px;
+        border: 1px solid #dce5cf;
+        border-radius: 5px;
+        background: #fbfcf7;
+        position: relative;
+      }
+      .work-card .label {
+        font-size: 9px;
+      }
+      .work-card h3 {
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: -0.8px;
+        margin: 14px 0 11px;
+      }
+      .work-card > p {
+        font-size: 13px;
+        line-height: 1.8;
+        color: #6e716e;
+      }
+      .work-card > a {
+        font-size: 11px;
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        color: #6e716e;
+        margin-top: 21px;
+      }
+      .release-stamp {
+        display: inline-flex;
+        gap: 7px;
+        align-items: center;
+        font-size: 10px;
+        color: #6e716e;
+        background: #edf3e5;
+        border: 1px solid #dce8ce;
+        border-radius: 3px;
+        padding: 5px 8px;
+        margin-top: 24px;
+      }
+      .release-stamp i {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background: #8caa71;
+        border-radius: 50%;
+      }
+      .ux-case {
+        margin-top: 22px;
+      }
+      .ux-case summary {
+        font-size: 11px;
+        color: #6e716e;
+        cursor: pointer;
+        padding: 10px 0;
+      }
+      .ux-case ul {
+        font-size: 12px;
+        color: #6e716e;
+        padding-left: 18px;
+        line-height: 1.8;
+      }
+      .ux-case li + li {
+        margin-top: 13px;
+      }
+      .ux-case p {
+        font-size: 11px;
+        color: #6e716e;
+        margin-top: 10px;
+      }
+      .other-work {
+        margin-top: 54px;
+        border-top: 1px solid #d8e3ca;
+        border-bottom: 1px solid #d8e3ca;
+        padding: 23px 0;
+      }
+      .other-work > summary {
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        letter-spacing: -0.3px;
+      }
+      .other-work > summary::-webkit-details-marker {
+        display: none;
+      }
+      .other-work > summary span {
+        font-size: 11px;
+        letter-spacing: 1px;
+        color: #6e716e;
+      }
+      .other-work[open] > summary {
+        margin-bottom: 24px;
+      }
+      .study-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 22px;
+      }
+      .study-grid section {
+        border-top: 1px solid #dbe7cc;
+        padding-top: 16px;
+      }
+      .study-grid h3 {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.1px;
+        line-height: 1.5;
+      }
+      .study-grid p {
+        font-size: 11px;
+        line-height: 1.8;
+        color: #6e716e;
+        margin: 8px 0;
+      }
+      .study-grid a {
+        color: #6e716e;
+      }
+      .study-grid a:hover {
+        color: #ad5539;
+      }
+      .service {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        padding: 47px 0;
+      }
+      .service h2 {
+        font-size: 24px;
+        letter-spacing: -0.8px;
+        font-weight: 400;
+        margin-bottom: 11px;
+      }
+      .service p {
+        font-size: 12px;
+        max-width: 650px;
+        line-height: 1.9;
+        color: #6e716e;
+      }
+      .contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        background: #303a28;
+        color: #6e716e;
+        border-radius: 5px;
+        padding: 36px;
+        margin: 8px 0 46px;
+      }
+      .contact h2 {
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: -1px;
+      }
+      .contact p {
+        font-size: 12px;
+        color: #6e716e;
+        margin-top: 10px;
+      }
+      .contact .button {
+        background: #eef4e5;
+        color: #696c69;
+        border-color: #eef4e5;
+      }
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        border-top: 1px solid #d6e2c8;
+        font-size: 10px;
+        color: #6e716e;
+        padding-top: 25px;
+        padding-bottom: 32px;
+      }
+      footer div {
+        display: flex;
+        gap: 20px;
+      }
+      @media (max-width: 850px) {
+        nav,
+        main,
+        footer {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+        nav {
+          height: 75px;
+          font-size: 12px;
+        }
+        nav div {
+          gap: 18px;
+        }
+        .intro {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          padding: 44px 0 35px;
+        }
+        h1 {
+          letter-spacing: -2px;
+        }
+        .intro p {
+          max-width: 570px;
+          font-size: 14px;
+        }
+        .featured-top {
+          padding: 25px;
+          display: block;
+        }
+        .featured-top h2 {
+          font-size: 28px;
+        }
+        .featured-actions {
+          margin-top: 23px;
+        }
+        .featured-image {
+          padding: 0 18px 18px;
+        }
+        .featured-caption {
+          padding: 0 25px 22px;
+          display: block;
+        }
+        .featured-caption span + span {
+          display: block;
+          margin-top: 6px;
+        }
+        .selected-heading {
+          margin-top: 36px;
+        }
+        .selected-grid {
+          grid-template-columns: 1fr;
+        }
+        .work-card {
+          padding: 27px;
+        }
+        .study-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 24px;
+        }
+        .service {
+          display: block;
+          padding: 32px 0;
+        }
+        .service .button {
+          margin-top: 23px;
+        }
+        .contact {
+          display: block;
+          padding: 29px;
+        }
+        .contact h2 {
+          font-size: 25px;
+        }
+        .contact .button {
+          margin-top: 23px;
+        }
+        footer {
+          font-size: 9px;
+          align-items: center;
+        }
+      }
+      @media (max-width: 450px) {
+        nav div > a:first-child {
+          display: none;
+        }
+        .intro .label {
+          font-size: 9px;
+        }
+        .featured-actions .button {
+          font-size: 10px;
+          padding: 10px 13px;
+        }
+        .featured-top h2 {
+          font-size: 26px;
+        }
+        .featured-top p {
+          font-size: 12px;
+        }
+        .selected-heading span {
+          display: none;
+        }
+        .study-grid {
+          grid-template-columns: 1fr;
+        }
+        .work-card h3 {
+          font-size: 23px;
+        }
+        .other-work > summary {
+          font-size: 15px;
+        }
+        .service h2 {
+          font-size: 23px;
+        }
+        footer div {
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="./">Kai Zhang / Selected work</a>
+      <div>
+        <a href="https://github.com/Ariyachan">GitHub ↗</a
+        ><a href="https://www.reddit.com/user/NaturalMinute4552/"
+          >Get in touch ↗</a
+        >
+      </div>
+    </nav>
+    <main>
+      <header class="intro">
+        <div>
+          <span class="label"
+            >INTERFACE DESIGN / FRONTEND / INTERACTIVE PRODUCTS</span
+          >
+          <h1>Considered interfaces.<br />Working products<span>.</span></h1>
+        </div>
+        <p>
+          I design interfaces and build interactive products for the web and
+          desktop. My work connects clear visual systems with the details that
+          make a product useful.
+        </p>
+      </header>
+      <section class="featured">
+        <div class="featured-top">
+          <div>
+            <span class="label">01 / FEATURED PROJECT</span>
+            <h2>FIELDWORK — Studio workspace</h2>
+            <p>
+              A connected desktop and mobile workspace for independent design
+              studios. Project briefs, tasks, milestones and drawing feedback,
+              together.
+            </p>
+          </div>
+          <div class="featured-actions">
+            <a class="button" href="https://ariyachan.github.io/fieldwork/"
+              >Open workspace ↗</a
+            ><a
+              class="button secondary"
+              href="https://ariyachan.github.io/fieldwork/case-study.html"
+              >Case study ↗</a
+            >
+          </div>
+        </div>
+        <a
+          class="featured-image"
+          href="https://ariyachan.github.io/fieldwork/case-study.html"
+          ><img
+            src="https://ariyachan.github.io/fieldwork/screenshots/overview.jpg"
+            alt="FIELDWORK studio workspace showing projects, tasks and drawing reviews"
+        /></a>
+        <div class="featured-caption">
+          <span>Product concept · Interface design · Frontend development</span
+          ><span
+            ><a href="https://github.com/Ariyachan/fieldwork"
+              >Explore the source ↗</a
+            ></span
+          >
+        </div>
+      </section>
+      <div class="selected-heading">
+        <h2>Selected work</h2>
+        <span>DEVELOPMENT & DESIGN</span>
+      </div>
+      <div class="selected-grid">
+        <section class="work-card">
+          <span class="label">02 / RELEASED PRODUCT</span>
+          <h3>Desktop Reptiles</h3>
+          <p>
+            A 3D desktop reptile-care game. I handled its solo development in
+            Godot, bringing habitat care, creature behavior and interactive
+            desktop play together.
+          </p>
+          <span class="release-stamp"><i />Released on Steam / July 2026</span
+          ><br /><a
+            href="https://store.steampowered.com/app/4699700/Desktop_Reptiles/"
+            >Explore the game ↗</a
+          >
+        </section>
+        <section class="work-card">
+          <span class="label">03 / PAID DESIGN REVIEW</span>
+          <h3>Game-discovery usability review</h3>
+          <p>
+            A review of five public discovery flows, with six prioritized
+            findings, supporting screenshots and five illustrated report pages.
+          </p>
+          <details class="ux-case" id="recent-paid-ux-review">
+            <summary>Read the selected findings</summary>
+            <ul>
+              <li>
+                <strong>Platform consistency.</strong> A result for the selected
+                device exposed only another platform's store link. I recommended
+                a compatible destination or a clearly labelled fallback.
+              </li>
+              <li>
+                <strong>Filter continuity.</strong> Platform and multiplayer
+                preferences were not visibly carried into refinement filters. I
+                recommended preserving selections with removable chips.
+              </li>
+              <li>
+                <strong>Recommendation context.</strong> Results lacked the
+                selected reference games and match explanations. I recommended a
+                short context summary and specific reasons for individual
+                matches.
+              </li>
+            </ul>
+            <p>The review covered signed-out public interactions on desktop.</p>
+          </details>
+        </section>
+      </div>
+      <details class="other-work">
+        <summary>Studies & other work <span>EXPLORE +</span></summary>
+        <div class="study-grid">
+          <section>
+            <h3><a href="treasury/">Northline treasury interface ↗</a></h3>
+            <p>Dashboard layouts, transaction filtering and CSV export.</p>
+          </section>
+          <section>
+            <h3><a href="evening/">Evening conversation interface ↗</a></h3>
+            <p>
+              Responsive conversation layouts, theme switching and preset
+              interactions.
+            </p>
+          </section>
+          <section>
+            <h3>
+              <a href="arena/Autonomous-arena-demonstration.html"
+                >Arena simulation ↗</a
+              >
+            </h3>
+            <p>A JavaScript simulation with match controls.</p>
+          </section>
+          <section>
+            <h3>
+              <a
+                href="https://gist.github.com/Ariyachan/0fe95a1fd96227874a37398c867531ff"
+                >Manufacturing report workflow ↗</a
+              >
+            </h3>
+            <p>
+              Record validation, production calculations and reproduction notes.
+            </p>
+          </section>
+          <section id="brazilian-portuguese-fiction">
+            <h3>
+              <a href="writing/brazilian-portuguese-interactive-story-sample.md"
+                >Brazilian Portuguese interactive fiction ↗</a
+              >
+            </h3>
+            <p>Character voices, dialogue and branching continuations.</p>
+          </section>
+          <section>
+            <h3>
+              <a href="puzzles/four-hands.md">Four-player paper puzzle ↗</a>
+            </h3>
+            <p>
+              Role-specific information, a worked solution and recovery paths.
+            </p>
+          </section>
+          <section>
+            <h3>
+              <a href="samples/blender-rig-study/rig-technical-study.mp4"
+                >Blender character rig ↗</a
+              >
+            </h3>
+            <p>FK/IK movement and property-driven facial texture states.</p>
+          </section>
+          <section>
+            <h3>
+              <a href="samples/rounded-character-studies/"
+                >Rounded character studies ↗</a
+              >
+            </h3>
+            <p>Three-dimensional form studies and model previews.</p>
+          </section>
+          <section>
+            <h3>
+              <a href="samples/four-direction-pixel-study/"
+                >Pixel animation ↗</a
+              >
+            </h3>
+            <p>Directional character movement and sprite sheets.</p>
+          </section>
+          <section id="educational-short">
+            <h3>
+              <a href="orders-duplicates-educational-demo.mp4"
+                >Educational short ↗</a
+              >
+            </h3>
+            <p>A captioned, 24-second explanation of duplicate order rows.</p>
+          </section>
+          <section>
+            <h3>
+              <a href="Quiz-video-demonstration.mp4">Vertical quiz video ↗</a>
+            </h3>
+            <p>A short typography and countdown study.</p>
+          </section>
+          <section>
+            <h3>
+              <a href="samples/gaming-thumbnails/"
+                >Gaming thumbnail studies ↗</a
+              >
+            </h3>
+            <p>Composition, contrast and thumbnail reading at small sizes.</p>
+          </section>
+          <section>
+            <h3>
+              <a href="samples/comedy-interaction-study/"
+                >Comedy interaction study ↗</a
+              >
+            </h3>
+            <p>Character staging and interaction timing.</p>
+          </section>
+          <section>
+            <h3>
+              <a href="samples/desktop-reptiles-trailer-study/"
+                >Desktop Reptiles trailer study ↗</a
+              >
+            </h3>
+            <p>A short edit built around the released game.</p>
+          </section>
+          <section>
+            <h3>
+              <a href="articles/firestore-document-id-model-boundary.md"
+                >Firestore document IDs ↗</a
+              >
+            </h3>
+            <p>
+              A technical explanation of document identifiers and model
+              boundaries.
+            </p>
+          </section>
+        </div>
+      </details>
+      <section class="service" id="website-ux-review">
+        <div>
+          <h2>Website usability review — US$20</h2>
+          <p>
+            I review one visitor flow across up to three public website pages
+            and deliver screenshots, prioritized findings and specific
+            recommendations. Payment is via PayPal after delivery, with one
+            follow-up clarification included. Scope and delivery date are
+            confirmed before starting.
+          </p>
+        </div>
+        <a
+          class="button secondary"
+          href="https://www.reddit.com/user/NaturalMinute4552/"
+          >Discuss your website ↗</a
+        >
+      </section>
+      <section class="contact">
+        <div>
+          <h2>Have something in mind?</h2>
+          <p>Send the brief, existing screens and delivery requirements.</p>
+        </div>
+        <a class="button" href="https://www.reddit.com/user/NaturalMinute4552/"
+          >Let's discuss the project ↗</a
+        >
+      </section>
+    </main>
+    <footer>
+      <span>Kai Zhang / Selected work / 2026</span>
+      <div>
+        <a href="https://github.com/Ariyachan">GitHub ↗</a
+        ><a href="https://github.com/Ariyachan/freelance-work-samples"
+          >Project files ↗</a
+        >
+      </div>
+    </footer>
+    <script>
+      function revealLinkedWork() {
+        if (!location.hash) return;
+        const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (!target) return;
+        let parent = target.parentElement;
+        while (parent) {
+          if (parent.tagName === 'DETAILS') parent.open = true;
+          parent = parent.parentElement;
+        }
+        if (target.tagName === 'DETAILS') target.open = true;
+        target.scrollIntoView();
+      }
+      revealLinkedWork();
+      window.addEventListener('hashchange', revealLinkedWork);
+    </script>
+  </body>
 </html>
