@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pocket March | Kai Zhang</title>
+<style>
+body{margin:0;color:#202923;background:#f8faf9;font:17px/1.6 system-ui,sans-serif}main{max-width:650px;margin:48px auto;padding:0 24px}h1{font-size:34px;line-height:1.2;margin:12px 0}p{margin:18px 0}audio{display:block;width:100%;margin:24px 0}a{color:#156549;text-underline-offset:4px}a:focus-visible,input:focus-visible{outline:3px solid #b6681a;outline-offset:4px}label{display:flex;align-items:center;gap:8px;font-size:15px}footer{margin-top:32px;padding-top:16px;border-top:1px solid #d2dcd6;font-size:15px}
+</style>
+</head>
+<body>
+<main>
+<p>Kai Zhang / Independent music study</p>
+<h1>Pocket March</h1>
+<p>A short chip-inspired march with pulse melody, pulse arpeggio, triangle bass and noise percussion.</p>
+<p>144 BPM · D major · 8 bars · 13.33 seconds</p>
+<audio id="study" controls preload="metadata" src="pocket-march-loop.wav"></audio>
+<label><input id="repeat" type="checkbox"> Repeat</label>
+<p><a href="pocket-march-loop.wav">WAV</a></p>
+<footer>This is a self-initiated work sample, not a client commission or a hardware-compatible game soundtrack.</footer>
+</main>
+<script>
+document.getElementById('repeat').addEventListener('change',event=>{document.getElementById('study').loop=event.target.checked;});
+</script>
+</body>
+</html>
