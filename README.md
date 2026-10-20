@@ -35,7 +35,6 @@ A paid review of public discovery flows, with prioritized findings, screenshots 
 - [Blender rig study](samples/blender-rig-study/)
 - [Rounded character studies](samples/rounded-character-studies/)
 - [Pixel animation](samples/four-direction-pixel-study/)
-- [Educational short](https://ariyachan.github.io/freelance-work-samples/#educational-short)
 - [Gaming thumbnail studies](samples/gaming-thumbnails/)
 
 [Project enquiries](https://www.reddit.com/user/NaturalMinute4552/)
