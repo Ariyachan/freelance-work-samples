@@ -33,7 +33,6 @@ A paid review of public discovery flows, with prioritized findings, screenshots 
 - [Four-player paper puzzle](puzzles/four-hands.md)
 - [Brazilian Portuguese interactive fiction](writing/brazilian-portuguese-interactive-story-sample.md)
 - [Blender rig study](samples/blender-rig-study/)
-- [Rounded character studies](samples/rounded-character-studies/)
 - [Pixel animation](samples/four-direction-pixel-study/)
 - [Gaming thumbnail studies](samples/gaming-thumbnails/)
 
